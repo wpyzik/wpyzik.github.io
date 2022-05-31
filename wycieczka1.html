@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_cc117b7a1375485e9769fecfafa83f73 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_cc117b7a1375485e9769fecfafa83f73" ></div>
+        
+</body>
+<script>    
+    
+            var map_cc117b7a1375485e9769fecfafa83f73 = L.map(
+                "map_cc117b7a1375485e9769fecfafa83f73",
+                {
+                    center: [36.22974000000005, -116.76696999999996],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 7,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e031705206d54ead802e1702675b69f0 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc117b7a1375485e9769fecfafa83f73);
+        
+    
+            var tile_layer_b45beb16b9184ec6a95ba982cf2bbda1 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc117b7a1375485e9769fecfafa83f73);
+        
+    
+            var tile_layer_fa2505b7baa2451185e2e3a9ed5c4ffb = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc117b7a1375485e9769fecfafa83f73);
+        
+    
+            var tile_layer_d8389b368a834abfb2ed5da0a327dbc7 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc117b7a1375485e9769fecfafa83f73);
+        
+    
+            var tile_layer_3c3b19c3c77444ebba79d990a898025f = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc117b7a1375485e9769fecfafa83f73);
+        
+    
+            var feature_group_b725a7aee10f44fcad5bbf30bf1552ae = L.featureGroup(
+                {}
+            ).addTo(map_cc117b7a1375485e9769fecfafa83f73);
+        
+    
+            var circle_marker_935e8fa287ec4531823fcf34cbf86925 = L.circleMarker(
+                [34.053490000000004, -118.24531999999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#124d00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_a6e2c022769545e0bd1f5eaf45df4f4d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e661822e4b2b4a1d97188e16d2fcff75 = $(`<div id="html_e661822e4b2b4a1d97188e16d2fcff75" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Los Angeles California" target="_blank">Los Angeles California</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na jego nazwe.<br> <br><img src="static/images/Los Angeles California.jpeg" width="200"/> <br> <br> <br>A jezeli chcesz zobaczyc co zwiedzalismy w Los Angeles, kliknij <a href="javascript:(function addMarker(){var map = window[$('.folium-map').attr('id')]; var la0=new L.CircleMarker([33.945609999999995,-118.39223999999999], {'color':'#124d00'}).addTo(map); la0.bindPopup('<a href=\\'https://www.google.com/search?q=Los Angeles International Airport\\' target=\\'_blank\\'>Los Angeles International Airport</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Los Angeles International Airport.jpeg\\' width=\\'200\\'/>').openPopup(); var la1=new L.CircleMarker([34.021390000000004,-118.50811000000002], {'color':'#124d00'}).addTo(map); la1.bindPopup('<a href=\\'https://www.google.com/search?q=Santa Monica Beach\\' target=\\'_blank\\'>Santa Monica Beach</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Santa Monica Beach.jpeg\\' width=\\'200\\'/>').openPopup(); var la2=new L.CircleMarker([34.00823,-118.49886000000001], {'color':'#124d00'}).addTo(map); la2.bindPopup('<a href=\\'https://www.google.com/search?q=Santa Monica Pier\\' target=\\'_blank\\'>Santa Monica Pier</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Santa Monica Pier.jpeg\\' width=\\'200\\'/>').openPopup(); var la3=new L.CircleMarker([34.10152,-118.34252], {'color':'#124d00'}).addTo(map); la3.bindPopup('<a href=\\'https://www.google.com/search?q=Hollywood Walk of Fame\\' target=\\'_blank\\'>Hollywood Walk of Fame</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Hollywood Walk of Fame.jpeg\\' width=\\'200\\'/>').openPopup(); var la4=new L.CircleMarker([34.11935998,-118.30051999999999], {'color':'#124d00'}).addTo(map); la4.bindPopup('<a href=\\'https://www.google.com/search?q=Griffith Observatory\\' target=\\'_blank\\'>Griffith Observatory</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Griffith Observatory.jpeg\\' width=\\'200\\'/>').openPopup(); var la5=new L.CircleMarker([34.07346,-118.40032], {'color':'#124d00'}).addTo(map); la5.bindPopup('<a href=\\'https://www.google.com/search?q=Beverly Hills Los Angeles\\' target=\\'_blank\\'>Beverly Hills Los Angeles</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Beverly Hills Los Angeles.jpeg\\' width=\\'200\\'/>').openPopup(); var la6=new L.CircleMarker([34.07141,-118.397415], {'color':'#124d00'}).addTo(map); la6.bindPopup('<a href=\\'https://www.google.com/search?q=Historic Cactus Garden Los Angeles CA 90210\\' target=\\'_blank\\'>Historic Cactus Garden Los Angeles CA 90210</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Historic Cactus Garden Los Angeles CA 90210.jpeg\\' width=\\'200\\'/>').openPopup(); var la7=new L.CircleMarker([34.04834,-118.25563999999999], {'color':'#124d00'}).addTo(map); la7.bindPopup('<a href=\\'https://www.google.com/search?q=Downtown Los Angeles\\' target=\\'_blank\\'>Downtown Los Angeles</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Downtown Los Angeles.jpeg\\' width=\\'200\\'/>').openPopup(); })()">tutaj</a></div>`)[0];
+            popup_a6e2c022769545e0bd1f5eaf45df4f4d.setContent(html_e661822e4b2b4a1d97188e16d2fcff75);
+        
+
+        circle_marker_935e8fa287ec4531823fcf34cbf86925.bindPopup(popup_a6e2c022769545e0bd1f5eaf45df4f4d)
+        ;
+
+        
+    
+    
+            circle_marker_935e8fa287ec4531823fcf34cbf86925.bindTooltip(
+                `<div>
+                     Los Angeles California
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_547e8297010d47a3acb093e363f07af3 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_1b8360fb02ff48829034ee3290c9415f = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_0761a33e1cbc42578981fcd799d731e4 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_71356223012b4022963aacb7bf669d6c = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_f582f9461d224fc4a032a96525dde367 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_15a06999cf714446a25dddd784e4ff32 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_87db69822f474a1f9f5d7c044c0d1768 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_aae05352d78e4991bc110c54521bccc7 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_83c7de71ff2d44fa9f6cb69226b14e6d = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_ce25f596b89a4413a9f1768266096291 = L.circleMarker(
+                [35.622479999999996, -117.66807],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8cff66", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_16089fb04e8048528a3102875d344113 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_096debe901314bbe994444e55eb0a542 = $(`<div id="html_096debe901314bbe994444e55eb0a542" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Ridgecrest California" target="_blank">Ridgecrest California</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na jego nazwe.<br> <br><img src="static/images/Ridgecrest California.jpeg" width="200"/> </div>`)[0];
+            popup_16089fb04e8048528a3102875d344113.setContent(html_096debe901314bbe994444e55eb0a542);
+        
+
+        circle_marker_ce25f596b89a4413a9f1768266096291.bindPopup(popup_16089fb04e8048528a3102875d344113)
+        ;
+
+        
+    
+    
+            circle_marker_ce25f596b89a4413a9f1768266096291.bindTooltip(
+                `<div>
+                     Ridgecrest California
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_bbff3fe139f843ea8b4ccdec191e812f = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_b82ae3a9c7754478986ffa54e0b2bd4c = L.circleMarker(
+                [36.24662, -116.81700000000001],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8cff66", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_491b94b49e4e499782c80d38d47341fb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8b232f29ab174f92b8d5c18da6d5ce0e = $(`<div id="html_8b232f29ab174f92b8d5c18da6d5ce0e" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Death Valley California" target="_blank">Death Valley California</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na jego nazwe.<br> <br><img src="static/images/Death Valley California.jpeg" width="200"/> </div>`)[0];
+            popup_491b94b49e4e499782c80d38d47341fb.setContent(html_8b232f29ab174f92b8d5c18da6d5ce0e);
+        
+
+        circle_marker_b82ae3a9c7754478986ffa54e0b2bd4c.bindPopup(popup_491b94b49e4e499782c80d38d47341fb)
+        ;
+
+        
+    
+    
+            circle_marker_b82ae3a9c7754478986ffa54e0b2bd4c.bindTooltip(
+                `<div>
+                     Death Valley California
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_d9cd2d2d99754a2d936dff820f7bf68c = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_633684ee75e84779a6e905e9e3a441ff = L.circleMarker(
+                [36.22974, -116.76697],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8cff66", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_53863ac797ce488bbe4ef3acabd41484 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_109249b6e0634d2dadfd2eb3c902f698 = $(`<div id="html_109249b6e0634d2dadfd2eb3c902f698" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Badwater California" target="_blank">Badwater California</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na jego nazwe.<br> <br><img src="static/images/Badwater California.jpeg" width="200"/> </div>`)[0];
+            popup_53863ac797ce488bbe4ef3acabd41484.setContent(html_109249b6e0634d2dadfd2eb3c902f698);
+        
+
+        circle_marker_633684ee75e84779a6e905e9e3a441ff.bindPopup(popup_53863ac797ce488bbe4ef3acabd41484)
+        ;
+
+        
+    
+    
+            circle_marker_633684ee75e84779a6e905e9e3a441ff.bindTooltip(
+                `<div>
+                     Badwater California
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_5ce38b0cc4104871929e55b368dc4f19 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_9c18b616bbc642a3a7c8bfb6f7246350 = L.circleMarker(
+                [36.42049, -116.84765],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8cff66", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_4eef9a09c662461c9ffab8b73a0969f8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5727df60efd54552b25465ad586cfc89 = $(`<div id="html_5727df60efd54552b25465ad586cfc89" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Golden Canyon California" target="_blank">Golden Canyon California</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na jego nazwe.<br> <br><img src="static/images/Golden Canyon California.jpeg" width="200"/> </div>`)[0];
+            popup_4eef9a09c662461c9ffab8b73a0969f8.setContent(html_5727df60efd54552b25465ad586cfc89);
+        
+
+        circle_marker_9c18b616bbc642a3a7c8bfb6f7246350.bindPopup(popup_4eef9a09c662461c9ffab8b73a0969f8)
+        ;
+
+        
+    
+    
+            circle_marker_9c18b616bbc642a3a7c8bfb6f7246350.bindTooltip(
+                `<div>
+                     Golden Canyon California
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_0024e878f28b402a85df54422a0de0e4 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_4e2f1cc0702e401eadbdc0556f5638e8 = L.circleMarker(
+                [36.421009999999995, -116.80892],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8cff66", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_114e43fced64464dbb86ac231e6246a2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7fce3cb53a5a42a6ab651fe28ea179b5 = $(`<div id="html_7fce3cb53a5a42a6ab651fe28ea179b5" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Zabriskie Point California" target="_blank">Zabriskie Point California</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na jego nazwe.<br> <br><img src="static/images/Zabriskie Point California.jpeg" width="200"/> </div>`)[0];
+            popup_114e43fced64464dbb86ac231e6246a2.setContent(html_7fce3cb53a5a42a6ab651fe28ea179b5);
+        
+
+        circle_marker_4e2f1cc0702e401eadbdc0556f5638e8.bindPopup(popup_114e43fced64464dbb86ac231e6246a2)
+        ;
+
+        
+    
+    
+            circle_marker_4e2f1cc0702e401eadbdc0556f5638e8.bindTooltip(
+                `<div>
+                     Zabriskie Point California
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_0114b0c68f12487a8f15f529bbf537dc = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_1db4e32ba2cb446ea07090725b4acacd = L.circleMarker(
+                [36.60617, -117.1143],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8cff66", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_304caf33968349348724193097c01b2f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_96483cb40a2c431a8d31ab92c854d317 = $(`<div id="html_96483cb40a2c431a8d31ab92c854d317" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Mesquite Flat Sand Dunes California" target="_blank">Mesquite Flat Sand Dunes California</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na jego nazwe.<br> <br><img src="static/images/Mesquite Flat Sand Dunes California.jpeg" width="200"/> </div>`)[0];
+            popup_304caf33968349348724193097c01b2f.setContent(html_96483cb40a2c431a8d31ab92c854d317);
+        
+
+        circle_marker_1db4e32ba2cb446ea07090725b4acacd.bindPopup(popup_304caf33968349348724193097c01b2f)
+        ;
+
+        
+    
+    
+            circle_marker_1db4e32ba2cb446ea07090725b4acacd.bindTooltip(
+                `<div>
+                     Mesquite Flat Sand Dunes California
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_22b63d95813c43b2b7ea08505640663f = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_216645cacf844540b3e7f5074b232797 = L.circleMarker(
+                [36.171929999999996, -115.14001],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#124d00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_b28efb6d23424845ad7a72bd73280e77 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_65842398f89a4a7b8cad9ace852b9565 = $(`<div id="html_65842398f89a4a7b8cad9ace852b9565" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Las Vegas Nevada" target="_blank">Las Vegas Nevada</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na nie!<br> <br>Jezeli chcesz zobaczyc wszystkie zdjecia, ktore tam robilismy, kliknij na ponizsze zdjecie.<br> <br><img src="static/images/Las Vegas Nevada.jpeg" width="200"/> <br> <br> <br> A jezeli chcesz zobaczyc wiecej miejsc, ktore zwiedzilismy w Las Vegas, kliknij <a href="javascript:(function addMarker(){var map = window[$('.folium-map').attr('id')]; var la0=new L.CircleMarker([36.11613,-115.17438999999999], {'color':'#124d00'}).addTo(map); la0.bindPopup('<a href=\\'https://www.google.com/search?q=Caesars Palace Las Vegas\\' target=\\'_blank\\'>Caesars Palace Las Vegas</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Caesars Palace Las Vegas.jpeg\\' width=\\'200\\'/>').openPopup(); var la1=new L.CircleMarker([36.17082998,-115.1444], {'color':'#124d00'}).addTo(map); la1.bindPopup('<a href=\\'https://www.google.com/search?q=Golden Nugget Carson Tower Las Vegas\\' target=\\'_blank\\'>Golden Nugget Carson Tower Las Vegas</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Golden Nugget Carson Tower Las Vegas.jpeg\\' width=\\'200\\'/>').openPopup(); var la2=new L.CircleMarker([36.16931003,-115.14078], {'color':'#124d00'}).addTo(map); la2.bindPopup('<a href=\\'https://www.google.com/search?q=Fremont Street Experience\\' target=\\'_blank\\'>Fremont Street Experience</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Fremont Street Experience.jpeg\\' width=\\'200\\'/>').openPopup(); var la3=new L.CircleMarker([36.14669,-115.15548999999999], {'color':'#124d00'}).addTo(map); la3.bindPopup('<a href=\\'https://www.google.com/search?q=Las Vegas Strip Nevada\\' target=\\'_blank\\'>Las Vegas Strip Nevada</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Las Vegas Strip Nevada.jpeg\\' width=\\'200\\'/>').openPopup(); var la4=new L.CircleMarker([36.11260998,-115.17308], {'color':'#124d00'}).addTo(map); la4.bindPopup('<a href=\\'https://www.google.com/search?q=Fountains of Bellagio Las Vegas\\' target=\\'_blank\\'>Fountains of Bellagio Las Vegas</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Fountains of Bellagio Las Vegas.jpeg\\' width=\\'200\\'/>').openPopup(); })()">tutaj</a></div>`)[0];
+            popup_b28efb6d23424845ad7a72bd73280e77.setContent(html_65842398f89a4a7b8cad9ace852b9565);
+        
+
+        circle_marker_216645cacf844540b3e7f5074b232797.bindPopup(popup_b28efb6d23424845ad7a72bd73280e77)
+        ;
+
+        
+    
+    
+            circle_marker_216645cacf844540b3e7f5074b232797.bindTooltip(
+                `<div>
+                     Las Vegas Nevada
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_036fcbb39c834438a6d80438350e474a = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_7ee55388145e4bd390550e46717b13bc = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_36e258c9e5b04ca1b7f82cf1b9499c0e = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_d89379ff44a94588aebe5dd1e9f5841a = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_d7ba429986c1442981e062d15dcf3ed0 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_8c24c51cae4248688921eb2e552874c3 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_d635396c85984f79969b1bb85d79245d = L.circleMarker(
+                [36.0166, -114.73886],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8cff66", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_5863bcfe41b34f66a1d4ed15e4f62666 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_58ea234a3d3b4c66b6ac0a54081c6fd1 = $(`<div id="html_58ea234a3d3b4c66b6ac0a54081c6fd1" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Hoover Dam Nevada" target="_blank">Hoover Dam Nevada</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na jego nazwe.<br> <br><img src="static/images/Hoover Dam Nevada.jpeg" width="200"/> </div>`)[0];
+            popup_5863bcfe41b34f66a1d4ed15e4f62666.setContent(html_58ea234a3d3b4c66b6ac0a54081c6fd1);
+        
+
+        circle_marker_d635396c85984f79969b1bb85d79245d.bindPopup(popup_5863bcfe41b34f66a1d4ed15e4f62666)
+        ;
+
+        
+    
+    
+            circle_marker_d635396c85984f79969b1bb85d79245d.bindTooltip(
+                `<div>
+                     Hoover Dam Nevada
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_aa25088955784fd0905852f6aa86a65c = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_dd64e44250004fd69d71e0d17920961b = L.circleMarker(
+                [35.1982, -111.6513],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8cff66", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_122b8cee663f45099d5fa2658a901c31 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_108f7cdf158b4c0789fc84061f59e102 = $(`<div id="html_108f7cdf158b4c0789fc84061f59e102" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Flagstaff Arizona" target="_blank">Flagstaff Arizona</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na jego nazwe.<br> <br><img src="static/images/Flagstaff Arizona.jpeg" width="200"/> </div>`)[0];
+            popup_122b8cee663f45099d5fa2658a901c31.setContent(html_108f7cdf158b4c0789fc84061f59e102);
+        
+
+        circle_marker_dd64e44250004fd69d71e0d17920961b.bindPopup(popup_122b8cee663f45099d5fa2658a901c31)
+        ;
+
+        
+    
+    
+            circle_marker_dd64e44250004fd69d71e0d17920961b.bindTooltip(
+                `<div>
+                     Flagstaff Arizona
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_a7c4f178355541809d43a9e4dee6ca15 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_8761e39cc1ac4efc9470325e35eb06a9 = L.circleMarker(
+                [36.05948, -112.10871000000002],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8cff66", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_8ef3247f88224ac2ace08a64f85cf173 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_96a344e4256b449f8ba217cb0d46c797 = $(`<div id="html_96a344e4256b449f8ba217cb0d46c797" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Grand Canyon South Rim Arizona" target="_blank">Grand Canyon South Rim Arizona</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na jego nazwe.<br> <br><img src="static/images/Grand Canyon South Rim Arizona.jpeg" width="200"/> </div>`)[0];
+            popup_8ef3247f88224ac2ace08a64f85cf173.setContent(html_96a344e4256b449f8ba217cb0d46c797);
+        
+
+        circle_marker_8761e39cc1ac4efc9470325e35eb06a9.bindPopup(popup_8ef3247f88224ac2ace08a64f85cf173)
+        ;
+
+        
+    
+    
+            circle_marker_8761e39cc1ac4efc9470325e35eb06a9.bindTooltip(
+                `<div>
+                     Grand Canyon South Rim Arizona
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_1eebd1efe84e468fa7213bad3cac1d91 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_c80e19a25e7949b3aabb8cce06097915 = L.circleMarker(
+                [36.91274806, -111.4501488],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8cff66", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_da2368e94ec14b03a5efbb4876d70414 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b24cf518ab4e497d8ca73f690cc0bf71 = $(`<div id="html_b24cf518ab4e497d8ca73f690cc0bf71" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Antelope Canyon Page" target="_blank">Antelope Canyon Page</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na jego nazwe.<br> <br><img src="static/images/Antelope Canyon Page.jpeg" width="200"/> </div>`)[0];
+            popup_da2368e94ec14b03a5efbb4876d70414.setContent(html_b24cf518ab4e497d8ca73f690cc0bf71);
+        
+
+        circle_marker_c80e19a25e7949b3aabb8cce06097915.bindPopup(popup_da2368e94ec14b03a5efbb4876d70414)
+        ;
+
+        
+    
+    
+            circle_marker_c80e19a25e7949b3aabb8cce06097915.bindTooltip(
+                `<div>
+                     Antelope Canyon Page
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_c6dfa339c8dc412a80e18ec95cd1ab90 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_dbec903ab3234b31a83d20cafc18edfc = L.circleMarker(
+                [36.8766, -111.50271000000001],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8cff66", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_a4da004f5476448d97ee03de35438ad1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ec5568956c3a47c89f546ad17b716e05 = $(`<div id="html_ec5568956c3a47c89f546ad17b716e05" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Horseshoe Band Page" target="_blank">Horseshoe Band Page</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na jego nazwe.<br> <br><img src="static/images/Horseshoe Band Page.jpeg" width="200"/> </div>`)[0];
+            popup_a4da004f5476448d97ee03de35438ad1.setContent(html_ec5568956c3a47c89f546ad17b716e05);
+        
+
+        circle_marker_dbec903ab3234b31a83d20cafc18edfc.bindPopup(popup_a4da004f5476448d97ee03de35438ad1)
+        ;
+
+        
+    
+    
+            circle_marker_dbec903ab3234b31a83d20cafc18edfc.bindTooltip(
+                `<div>
+                     Horseshoe Band Page
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_80b0c365135149759dac8d0ef5bc67ec = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_6e106a8de63342178ade871edf7ac039 = L.circleMarker(
+                [37.04813, -112.52788000000001],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8cff66", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_3a0e15c476a7490a8ce7c5136b4ca38d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6705cdb7942a438cadd1ab710a0b4ffb = $(`<div id="html_6705cdb7942a438cadd1ab710a0b4ffb" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Kanaab Utah" target="_blank">Kanaab Utah</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na jego nazwe.<br> <br><img src="static/images/Kanaab Utah.jpeg" width="200"/> </div>`)[0];
+            popup_3a0e15c476a7490a8ce7c5136b4ca38d.setContent(html_6705cdb7942a438cadd1ab710a0b4ffb);
+        
+
+        circle_marker_6e106a8de63342178ade871edf7ac039.bindPopup(popup_3a0e15c476a7490a8ce7c5136b4ca38d)
+        ;
+
+        
+    
+    
+            circle_marker_6e106a8de63342178ade871edf7ac039.bindTooltip(
+                `<div>
+                     Kanaab Utah
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_19aff76e94294dc89222bab43161ae35 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_0b2cee0fbfdf4b00b64630bef4dc7a2c = L.circleMarker(
+                [37.641290000000005, -112.1687],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8cff66", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_5085a6601c984014afeee23e45bde1fe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b4f85c8d71564bf5b6eca8a81e3a1126 = $(`<div id="html_b4f85c8d71564bf5b6eca8a81e3a1126" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Bryce National Park Utah" target="_blank">Bryce National Park Utah</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na jego nazwe.<br> <br><img src="static/images/Bryce National Park Utah.jpeg" width="200"/> </div>`)[0];
+            popup_5085a6601c984014afeee23e45bde1fe.setContent(html_b4f85c8d71564bf5b6eca8a81e3a1126);
+        
+
+        circle_marker_0b2cee0fbfdf4b00b64630bef4dc7a2c.bindPopup(popup_5085a6601c984014afeee23e45bde1fe)
+        ;
+
+        
+    
+    
+            circle_marker_0b2cee0fbfdf4b00b64630bef4dc7a2c.bindTooltip(
+                `<div>
+                     Bryce National Park Utah
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_6c531d3a950b42bd915ff75b747175cb = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_93244c0a7e2440549edc330670c40168 = L.circleMarker(
+                [37.0386, -112.71576],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8cff66", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_8b265388775d411fa0929da16c24161e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1d5b0a4e249d480caacca7f1b1c13440 = $(`<div id="html_1d5b0a4e249d480caacca7f1b1c13440" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Coral Pink Sand Dunes State Park Utah" target="_blank">Coral Pink Sand Dunes State Park Utah</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na jego nazwe.<br> <br><img src="static/images/Coral Pink Sand Dunes State Park Utah.jpeg" width="200"/> </div>`)[0];
+            popup_8b265388775d411fa0929da16c24161e.setContent(html_1d5b0a4e249d480caacca7f1b1c13440);
+        
+
+        circle_marker_93244c0a7e2440549edc330670c40168.bindPopup(popup_8b265388775d411fa0929da16c24161e)
+        ;
+
+        
+    
+    
+            circle_marker_93244c0a7e2440549edc330670c40168.bindTooltip(
+                `<div>
+                     Coral Pink Sand Dunes State Park Utah
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_8c96e9ab721147d98cf522c7e11d2109 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_53c528c3d4274af4aeda103329f5a687 = L.circleMarker(
+                [37.20499, -112.98293999999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8cff66", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_9ec02b2c19a84b33ae1fde17c34f1d49 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_74c50320fd824d13856d7e5a55e09c82 = $(`<div id="html_74c50320fd824d13856d7e5a55e09c82" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Zion National Park Utah" target="_blank">Zion National Park Utah</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na jego nazwe.<br> <br><img src="static/images/Zion National Park Utah.jpeg" width="200"/> </div>`)[0];
+            popup_9ec02b2c19a84b33ae1fde17c34f1d49.setContent(html_74c50320fd824d13856d7e5a55e09c82);
+        
+
+        circle_marker_53c528c3d4274af4aeda103329f5a687.bindPopup(popup_9ec02b2c19a84b33ae1fde17c34f1d49)
+        ;
+
+        
+    
+    
+            circle_marker_53c528c3d4274af4aeda103329f5a687.bindTooltip(
+                `<div>
+                     Zion National Park Utah
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_ac4b989a4bbd467998da0a7b2e082cef = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_ef35f37d44fa4bde92b543eec3e6f3fe = L.circleMarker(
+                [37.26943, -112.94938],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8cff66", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_85042520ff6242ea94cdba66df054923 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d496157ac6ae4254ba1736109eb1792c = $(`<div id="html_d496157ac6ae4254ba1736109eb1792c" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Angels Landing Utah" target="_blank">Angels Landing Utah</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na jego nazwe.<br> <br><img src="static/images/Angels Landing Utah.jpeg" width="200"/> </div>`)[0];
+            popup_85042520ff6242ea94cdba66df054923.setContent(html_d496157ac6ae4254ba1736109eb1792c);
+        
+
+        circle_marker_ef35f37d44fa4bde92b543eec3e6f3fe.bindPopup(popup_85042520ff6242ea94cdba66df054923)
+        ;
+
+        
+    
+    
+            circle_marker_ef35f37d44fa4bde92b543eec3e6f3fe.bindTooltip(
+                `<div>
+                     Angels Landing Utah
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_28680f30c434435aa5ba49393a7dfd0c = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_4136497a6205462f83177befa14752c7 = L.circleMarker(
+                [36.171929999999996, -115.14001],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#124d00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_132fbbb3ec134f3a87e2843dcbbcadd4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4f0a45c944a545e9952e4e328bd55f41 = $(`<div id="html_4f0a45c944a545e9952e4e328bd55f41" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Las Vegas Nevada" target="_blank">Las Vegas Nevada</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na nie!<br> <br>Jezeli chcesz zobaczyc wszystkie zdjecia, ktore tam robilismy, kliknij na ponizsze zdjecie.<br> <br><img src="static/images/Las Vegas Nevada.jpeg" width="200"/> <br> <br> <br> A jezeli chcesz zobaczyc wiecej miejsc, ktore zwiedzilismy w Las Vegas, kliknij <a href="javascript:(function addMarker(){var map = window[$('.folium-map').attr('id')]; var la0=new L.CircleMarker([36.11613,-115.17438999999999], {'color':'#124d00'}).addTo(map); la0.bindPopup('<a href=\\'https://www.google.com/search?q=Caesars Palace Las Vegas\\' target=\\'_blank\\'>Caesars Palace Las Vegas</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Caesars Palace Las Vegas.jpeg\\' width=\\'200\\'/>').openPopup(); var la1=new L.CircleMarker([36.17082998,-115.1444], {'color':'#124d00'}).addTo(map); la1.bindPopup('<a href=\\'https://www.google.com/search?q=Golden Nugget Carson Tower Las Vegas\\' target=\\'_blank\\'>Golden Nugget Carson Tower Las Vegas</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Golden Nugget Carson Tower Las Vegas.jpeg\\' width=\\'200\\'/>').openPopup(); var la2=new L.CircleMarker([36.16931003,-115.14078], {'color':'#124d00'}).addTo(map); la2.bindPopup('<a href=\\'https://www.google.com/search?q=Fremont Street Experience\\' target=\\'_blank\\'>Fremont Street Experience</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Fremont Street Experience.jpeg\\' width=\\'200\\'/>').openPopup(); var la3=new L.CircleMarker([36.14669,-115.15548999999999], {'color':'#124d00'}).addTo(map); la3.bindPopup('<a href=\\'https://www.google.com/search?q=Las Vegas Strip Nevada\\' target=\\'_blank\\'>Las Vegas Strip Nevada</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Las Vegas Strip Nevada.jpeg\\' width=\\'200\\'/>').openPopup(); var la4=new L.CircleMarker([36.11260998,-115.17308], {'color':'#124d00'}).addTo(map); la4.bindPopup('<a href=\\'https://www.google.com/search?q=Fountains of Bellagio Las Vegas\\' target=\\'_blank\\'>Fountains of Bellagio Las Vegas</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Fountains of Bellagio Las Vegas.jpeg\\' width=\\'200\\'/>').openPopup(); })()">tutaj</a></div>`)[0];
+            popup_132fbbb3ec134f3a87e2843dcbbcadd4.setContent(html_4f0a45c944a545e9952e4e328bd55f41);
+        
+
+        circle_marker_4136497a6205462f83177befa14752c7.bindPopup(popup_132fbbb3ec134f3a87e2843dcbbcadd4)
+        ;
+
+        
+    
+    
+            circle_marker_4136497a6205462f83177befa14752c7.bindTooltip(
+                `<div>
+                     Las Vegas Nevada
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_7ddf086870ec41f6a5df803f54840e49 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_55156ca6ecd34373b3375f53d5f1561b = L.circleMarker(
+                [36.5982, -121.89647],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8cff66", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_776f1c0cda9d485181531be91517eca9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5585dd2c60a44ce3a00f5b304ab47fa0 = $(`<div id="html_5585dd2c60a44ce3a00f5b304ab47fa0" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Monterey California" target="_blank">Monterey California</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na jego nazwe.<br> <br><img src="static/images/Monterey California.jpeg" width="200"/> </div>`)[0];
+            popup_776f1c0cda9d485181531be91517eca9.setContent(html_5585dd2c60a44ce3a00f5b304ab47fa0);
+        
+
+        circle_marker_55156ca6ecd34373b3375f53d5f1561b.bindPopup(popup_776f1c0cda9d485181531be91517eca9)
+        ;
+
+        
+    
+    
+            circle_marker_55156ca6ecd34373b3375f53d5f1561b.bindTooltip(
+                `<div>
+                     Monterey California
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_13435695624244e2803e23cccebeefe7 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_9af4951190ba4b0291bfc5bf01df1058 = L.circleMarker(
+                [36.554429999999996, -121.92442],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8cff66", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_5e0d4900941047378317431e7f987bc8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3c16050b490d4e01b74238505066867c = $(`<div id="html_3c16050b490d4e01b74238505066867c" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Carmel by The Sea California" target="_blank">Carmel by The Sea California</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na jego nazwe.<br> <br><img src="static/images/Carmel by The Sea California.jpeg" width="200"/> </div>`)[0];
+            popup_5e0d4900941047378317431e7f987bc8.setContent(html_3c16050b490d4e01b74238505066867c);
+        
+
+        circle_marker_9af4951190ba4b0291bfc5bf01df1058.bindPopup(popup_5e0d4900941047378317431e7f987bc8)
+        ;
+
+        
+    
+    
+            circle_marker_9af4951190ba4b0291bfc5bf01df1058.bindTooltip(
+                `<div>
+                     Carmel by The Sea California
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_66371ff73fec49d386467766ee293767 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_f8e31f4e896a4d6d9499c45469c30740 = L.circleMarker(
+                [36.97424, -122.03098],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8cff66", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_fc400e3a67b543c6ac4bade901e2317d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_701b9f0b666e4c6e881d25181e10e217 = $(`<div id="html_701b9f0b666e4c6e881d25181e10e217" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=Santa Cruz California" target="_blank">Santa Cruz California</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na jego nazwe.<br> <br><img src="static/images/Santa Cruz California.jpeg" width="200"/> </div>`)[0];
+            popup_fc400e3a67b543c6ac4bade901e2317d.setContent(html_701b9f0b666e4c6e881d25181e10e217);
+        
+
+        circle_marker_f8e31f4e896a4d6d9499c45469c30740.bindPopup(popup_fc400e3a67b543c6ac4bade901e2317d)
+        ;
+
+        
+    
+    
+            circle_marker_f8e31f4e896a4d6d9499c45469c30740.bindTooltip(
+                `<div>
+                     Santa Cruz California
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_ee1b9a88c3454ac3975415ca0839a560 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var circle_marker_6398075589af42bbb06ddf5680ff27e8 = L.circleMarker(
+                [37.777120000000004, -122.41963999999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#124d00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+        var popup_6240f1b1cf204acab2c3227eb63ffec7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2e1ca0ac137e4d73a4d0cfe310eb4fb5 = $(`<div id="html_2e1ca0ac137e4d73a4d0cfe310eb4fb5" style="width: 100.0%; height: 100.0%;"> <a href="https://www.google.com/search?q=San Francisco California" target="_blank">San Francisco California</a> <br>Jezeli chcesz sie dowiedziec troche wiecej o tym miejscu, kliknij na nie!<br> <br>Jezeli chcesz zobaczyc wszystkie zdjecia, ktore tam robilismy, kliknij na ponizsze zdjecie.<br> <br><img src="static/images/San Francisco California.jpeg" width="200"/> <br> <br> <br> A jezeli chcesz zobaczyc wiecej miejsc, ktore zwiedzilismy w San Francisco, kliknij <a href="javascript:(function addMarker(){var map = window[$('.folium-map').attr('id')]; var la0=new L.CircleMarker([37.77214997,-122.4382852], {'color':'#124d00'}).addTo(map); la0.bindPopup('<a href=\\'https://www.google.com/search?q=1062 Page Street San Francisco\\' target=\\'_blank\\'>1062 Page Street San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/1062 Page Street San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la1=new L.CircleMarker([37.790040000000005,-122.3972], {'color':'#124d00'}).addTo(map); la1.bindPopup('<a href=\\'https://www.google.com/search?q=Salesforce Park San Francisco\\' target=\\'_blank\\'>Salesforce Park San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Salesforce Park San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la2=new L.CircleMarker([37.78782,-122.40748], {'color':'#124d00'}).addTo(map); la2.bindPopup('<a href=\\'https://www.google.com/search?q=Union Square San Francisco\\' target=\\'_blank\\'>Union Square San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Union Square San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la3=new L.CircleMarker([37.78782,-122.40748], {'color':'#124d00'}).addTo(map); la3.bindPopup('<a href=\\'https://www.google.com/search?q=Cheescake Factory Union Square San Francisco\\' target=\\'_blank\\'>Cheescake Factory Union Square San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Cheescake Factory Union Square San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la4=new L.CircleMarker([37.7943,-122.40409], {'color':'#124d00'}).addTo(map); la4.bindPopup('<a href=\\'https://www.google.com/search?q=The View Restaurant San Francisco\\' target=\\'_blank\\'>The View Restaurant San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/The View Restaurant San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la5=new L.CircleMarker([14.05105633,121.3329], {'color':'#124d00'}).addTo(map); la5.bindPopup('<a href=\\'https://www.google.com/search?q=St Dominics Church San Francisco\\' target=\\'_blank\\'>St Dominics Church San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/St Dominics Church San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la6=new L.CircleMarker([37.78219544,-122.38837849999999], {'color':'#124d00'}).addTo(map); la6.bindPopup('<a href=\\'https://www.google.com/search?q=Embacadero Street San Francisco\\' target=\\'_blank\\'>Embacadero Street San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Embacadero Street San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la7=new L.CircleMarker([37.79719006,-122.3945449], {'color':'#124d00'}).addTo(map); la7.bindPopup('<a href=\\'https://www.google.com/search?q=Pier 1 San Francisco\\' target=\\'_blank\\'>Pier 1 San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Pier 1 San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la8=new L.CircleMarker([37.79494159,-122.39236090000001], {'color':'#124d00'}).addTo(map); la8.bindPopup('<a href=\\'https://www.google.com/search?q=Ferry Plaza Market Building San Francisco\\' target=\\'_blank\\'>Ferry Plaza Market Building San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Ferry Plaza Market Building San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la9=new L.CircleMarker([37.80288,-122.44899], {'color':'#124d00'}).addTo(map); la9.bindPopup('<a href=\\'https://www.google.com/search?q=Palace of Fine Arts San Francisco\\' target=\\'_blank\\'>Palace of Fine Arts San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Palace of Fine Arts San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la10=new L.CircleMarker([37.819140000000004,-122.47847], {'color':'#124d00'}).addTo(map); la10.bindPopup('<a href=\\'https://www.google.com/search?q=Golden Gate Bridge\\' target=\\'_blank\\'>Golden Gate Bridge</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Golden Gate Bridge.jpeg\\' width=\\'200\\'/>').openPopup(); var la11=new L.CircleMarker([37.85924,-122.48858999999999], {'color':'#124d00'}).addTo(map); la11.bindPopup('<a href=\\'https://www.google.com/search?q= Sausalito\\' target=\\'_blank\\'> Sausalito</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/ Sausalito.jpeg\\' width=\\'200\\'/>').openPopup(); var la12=new L.CircleMarker([37.80315,-122.43675], {'color':'#124d00'}).addTo(map); la12.bindPopup('<a href=\\'https://www.google.com/search?q=Marina District San Francisco\\' target=\\'_blank\\'>Marina District San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Marina District San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la13=new L.CircleMarker([37.78394,-122.40715], {'color':'#124d00'}).addTo(map); la13.bindPopup('<a href=\\'https://www.google.com/search?q=Ghirardelli Chocolate Marketplace\\' target=\\'_blank\\'>Ghirardelli Chocolate Marketplace</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Ghirardelli Chocolate Marketplace.jpeg\\' width=\\'200\\'/>').openPopup(); var la14=new L.CircleMarker([37.80892184,-122.4145456], {'color':'#124d00'}).addTo(map); la14.bindPopup('<a href=\\'https://www.google.com/search?q=Fisherman Wharf San Francisco\\' target=\\'_blank\\'>Fisherman Wharf San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Fisherman Wharf San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la15=new L.CircleMarker([37.776596000000005,-122.450718], {'color':'#124d00'}).addTo(map); la15.bindPopup('<a href=\\'https://www.google.com/search?q=University of San Francisco\\' target=\\'_blank\\'>University of San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/University of San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la16=new L.CircleMarker([37.77643,-122.43268], {'color':'#124d00'}).addTo(map); la16.bindPopup('<a href=\\'https://www.google.com/search?q= Painted Ladies San Francisco\\' target=\\'_blank\\'> Painted Ladies San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/ Painted Ladies San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la17=new L.CircleMarker([37.77726,-122.43486000000001], {'color':'#124d00'}).addTo(map); la17.bindPopup('<a href=\\'https://www.google.com/search?q=Alamo Square Park San Francisco\\' target=\\'_blank\\'>Alamo Square Park San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Alamo Square Park San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la18=new L.CircleMarker([37.80203,-122.41963], {'color':'#124d00'}).addTo(map); la18.bindPopup('<a href=\\'https://www.google.com/search?q=Russian Hill San Francisco\\' target=\\'_blank\\'>Russian Hill San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Russian Hill San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la19=new L.CircleMarker([37.801970000000004,-122.41955], {'color':'#124d00'}).addTo(map); la19.bindPopup('<a href=\\'https://www.google.com/search?q=Lombard Street San Francisco\\' target=\\'_blank\\'>Lombard Street San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Lombard Street San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la20=new L.CircleMarker([37.80239,-122.40581999999999], {'color':'#124d00'}).addTo(map); la20.bindPopup('<a href=\\'https://www.google.com/search?q=Coint Tower San Francisco\\' target=\\'_blank\\'>Coint Tower San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Coint Tower San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la21=new L.CircleMarker([37.79103,-122.40406000000002], {'color':'#124d00'}).addTo(map); la21.bindPopup('<a href=\\'https://www.google.com/search?q=Super Duper Burger Downtown San Francisco\\' target=\\'_blank\\'>Super Duper Burger Downtown San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Super Duper Burger Downtown San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la22=new L.CircleMarker([37.7841,-122.40614], {'color':'#124d00'}).addTo(map); la22.bindPopup('<a href=\\'https://www.google.com/search?q=Westfield San Francisco\\' target=\\'_blank\\'>Westfield San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Westfield San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la23=new L.CircleMarker([37.79745,-122.4591], {'color':'#124d00'}).addTo(map); la23.bindPopup('<a href=\\'https://www.google.com/search?q=Presidio of San Francisco\\' target=\\'_blank\\'>Presidio of San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Presidio of San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la24=new L.CircleMarker([37.80069,-122.48033999999998], {'color':'#124d00'}).addTo(map); la24.bindPopup('<a href=\\'https://www.google.com/search?q=Marshalls Beach San Francisco\\' target=\\'_blank\\'>Marshalls Beach San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Marshalls Beach San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la25=new L.CircleMarker([37.78954,-122.40867], {'color':'#124d00'}).addTo(map); la25.bindPopup('<a href=\\'https://www.google.com/search?q=Downtown San Francisco\\' target=\\'_blank\\'>Downtown San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Downtown San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la26=new L.CircleMarker([37.79118501,-122.391791], {'color':'#124d00'}).addTo(map); la26.bindPopup('<a href=\\'https://www.google.com/search?q=201 Spear Street San Francisco\\' target=\\'_blank\\'>201 Spear Street San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/201 Spear Street San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la27=new L.CircleMarker([37.771440000000005,-122.45414], {'color':'#124d00'}).addTo(map); la27.bindPopup('<a href=\\'https://www.google.com/search?q=Golden Gate Park\\' target=\\'_blank\\'>Golden Gate Park</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Golden Gate Park.jpeg\\' width=\\'200\\'/>').openPopup(); var la28=new L.CircleMarker([37.756646,-122.47167900000001], {'color':'#124d00'}).addTo(map); la28.bindPopup('<a href=\\'https://www.google.com/search?q=Grandview Park\\' target=\\'_blank\\'>Grandview Park</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Grandview Park.jpeg\\' width=\\'200\\'/>').openPopup(); var la29=new L.CircleMarker([37.756735,-122.473101], {'color':'#124d00'}).addTo(map); la29.bindPopup('<a href=\\'https://www.google.com/search?q=16th Avenue Tiled Steps\\' target=\\'_blank\\'>16th Avenue Tiled Steps</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/16th Avenue Tiled Steps.jpeg\\' width=\\'200\\'/>').openPopup(); var la30=new L.CircleMarker([37.77004,-122.5109], {'color':'#124d00'}).addTo(map); la30.bindPopup('<a href=\\'https://www.google.com/search?q=Ocean Beach San Francisco\\' target=\\'_blank\\'>Ocean Beach San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Ocean Beach San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la31=new L.CircleMarker([37.80575,-122.46728999999999], {'color':'#124d00'}).addTo(map); la31.bindPopup('<a href=\\'https://www.google.com/search?q=Crissy Field San Francisco\\' target=\\'_blank\\'>Crissy Field San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Crissy Field San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la32=new L.CircleMarker([37.78628,-122.49408000000001], {'color':'#124d00'}).addTo(map); la32.bindPopup('<a href=\\'https://www.google.com/search?q=Lands End San Francisco\\' target=\\'_blank\\'>Lands End San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Lands End San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la33=new L.CircleMarker([37.77106625,-122.47499850000001], {'color':'#124d00'}).addTo(map); la33.bindPopup('<a href=\\'https://www.google.com/search?q=Stow Lake San Francisco\\' target=\\'_blank\\'>Stow Lake San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Stow Lake San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la34=new L.CircleMarker([37.83045,-122.52493999999999], {'color':'#124d00'}).addTo(map); la34.bindPopup('<a href=\\'https://www.google.com/search?q=Marine Headlands Sausalito\\' target=\\'_blank\\'>Marine Headlands Sausalito</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Marine Headlands Sausalito.jpeg\\' width=\\'200\\'/>').openPopup(); var la35=new L.CircleMarker([37.78031,-122.45000300000001], {'color':'#124d00'}).addTo(map); la35.bindPopup('<a href=\\'https://www.google.com/search?q=331 Anza Street 202B San Francisco\\' target=\\'_blank\\'>331 Anza Street 202B San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/331 Anza Street 202B San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la36=new L.CircleMarker([37.795390000000005,-122.40812], {'color':'#124d00'}).addTo(map); la36.bindPopup('<a href=\\'https://www.google.com/search?q=Chinatown San Francisco\\' target=\\'_blank\\'>Chinatown San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Chinatown San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la37=new L.CircleMarker([37.75669,-122.44223999999998], {'color':'#124d00'}).addTo(map); la37.bindPopup('<a href=\\'https://www.google.com/search?q=Twin Peaks San Francisco\\' target=\\'_blank\\'>Twin Peaks San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Twin Peaks San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la38=new L.CircleMarker([37.74050932,-122.42412350000001], {'color':'#124d00'}).addTo(map); la38.bindPopup('<a href=\\'https://www.google.com/search?q=Dolores Park San Francisco\\' target=\\'_blank\\'>Dolores Park San Francisco</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/Dolores Park San Francisco.jpeg\\' width=\\'200\\'/>').openPopup(); var la39=new L.CircleMarker([37.61882,-122.3758], {'color':'#124d00'}).addTo(map); la39.bindPopup('<a href=\\'https://www.google.com/search?q=San Francisco Airport\\' target=\\'_blank\\'>San Francisco Airport</a><br>Troche wiecej informacji? Kliknij na nazwe!<br> <br><img src=\\'static/images/San Francisco Airport.jpeg\\' width=\\'200\\'/>').openPopup(); })()">tutaj</a></div>`)[0];
+            popup_6240f1b1cf204acab2c3227eb63ffec7.setContent(html_2e1ca0ac137e4d73a4d0cfe310eb4fb5);
+        
+
+        circle_marker_6398075589af42bbb06ddf5680ff27e8.bindPopup(popup_6240f1b1cf204acab2c3227eb63ffec7)
+        ;
+
+        
+    
+    
+            circle_marker_6398075589af42bbb06ddf5680ff27e8.bindTooltip(
+                `<div>
+                     San Francisco California
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_96c04f2bd1314ac39b63bbb10a0d89c1 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_ef70ec88842b44bf96ed11a80f8dbd23 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_5a1ac8b8c73c4c329181f066a8fce531 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_da2002188d6a455181db7ee2f3991662 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_7398d655e93c4e41ab7ad513aadc18df = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_c2fd24ae6b09408c96bc200aa51493ab = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_098e8ebc905e4549a924359d21f8f344 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_3f4b696e719142e1832fe01b24a99e63 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_e20dc5297bd541168d74e56db8c1404b = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_3b1005d146c64787843f432013bf5992 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_8b68c226731a40b0913f5dc1a26d4925 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_522c4eeaf9c143959d65337273562f68 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_7a3fc4785a8e4d00b28c9fc8292bf206 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_3423fe03202243c4bc95376d23b31535 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_bfa9c0db809f49b298baf7f7b66038ee = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_6df334c98fdc4497bb2ddf4307532860 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_c2f3c535dc3c40a2a5048126a557d243 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_9a81529ead5d4bdfb2be119fc98f1455 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_8554f742fad44e5093e93eccf5b2bb08 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_5f37add7f17b4ba0a41e8692b697a055 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_d414c6a002ec4525976ef6b71999190c = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_bc30f76015244c4ba8c984c848a574e1 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_6208138c5f664863a7df5162e4046428 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_e7de0b898ce8489ebe38b4c7e95a5312 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_7d1b27f841d64403973b3cbc0c19ff2d = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_99896ee4fa504db598ed8f1017c6e4bf = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_90e6e68a034e4b14b31041486bfcf71f = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_0ca76594a9eb4d5db04d1114e217569f = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_19270807a67045b1bf482d0c7ca2328b = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_c2869b7c28e740a8a4013816dea4f8e5 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_2824e8f7767d4a4880ec6eaacfd85d5d = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_27233318da204912827a37a4f9342b89 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_8af633118ccd431fb961ea3323328c61 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_00196f267df74467be3bf64772e8af9f = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_94e6f0b29c24474ca363755794cb0ae8 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_277cb6c8e77c4a80bc6d2998c0bb5273 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_30b40015c92a474bb117087bf7292af2 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_08fa49eda9d34a6698fba2f62f88f322 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_908f45b65aaa49f5be036b13d977c8c2 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_535583e00b1340ea977cf6ad9330c908 = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var poly_line_e6039a0e6b754dccb5aeb350058abddf = L.polyline(
+                [[34.053490000000004, -118.24531999999999], [35.622479999999996, -117.66807], [36.24662, -116.81700000000001], [36.22974, -116.76697], [36.42049, -116.84765], [36.421009999999995, -116.80892], [36.60617, -117.1143], [36.171929999999996, -115.14001], [36.0166, -114.73886], [35.1982, -111.6513], [36.05948, -112.10871000000002], [36.91274806, -111.4501488], [36.8766, -111.50271000000001], [37.04813, -112.52788000000001], [37.641290000000005, -112.1687], [37.0386, -112.71576], [37.20499, -112.98293999999999], [37.26943, -112.94938], [36.171929999999996, -115.14001], [36.5982, -121.89647], [36.554429999999996, -121.92442], [36.97424, -122.03098], [37.777120000000004, -122.41963999999999]],
+                {"bubblingMouseEvents": true, "color": "#1a6600", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a6600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 7, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_b725a7aee10f44fcad5bbf30bf1552ae);
+        
+    
+            var layer_control_dbf106f85c694ac593ad87c74a0c39a3 = {
+                base_layers : {
+                    "stamenterrain" : tile_layer_b45beb16b9184ec6a95ba982cf2bbda1,
+                    "stamentoner" : tile_layer_fa2505b7baa2451185e2e3a9ed5c4ffb,
+                    "stamenwatercolor" : tile_layer_d8389b368a834abfb2ed5da0a327dbc7,
+                    "cartodbpositron" : tile_layer_3c3b19c3c77444ebba79d990a898025f,
+                },
+                overlays :  {
+                    "Wycieczka" : feature_group_b725a7aee10f44fcad5bbf30bf1552ae,
+                },
+            };
+            L.control.layers(
+                layer_control_dbf106f85c694ac593ad87c74a0c39a3.base_layers,
+                layer_control_dbf106f85c694ac593ad87c74a0c39a3.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_cc117b7a1375485e9769fecfafa83f73);
+            tile_layer_fa2505b7baa2451185e2e3a9ed5c4ffb.remove();
+            tile_layer_d8389b368a834abfb2ed5da0a327dbc7.remove();
+            tile_layer_3c3b19c3c77444ebba79d990a898025f.remove();
+        
+</script>
