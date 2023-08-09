@@ -929,13 +929,6 @@ section {
   width: 100%;
 }
 
-
-
-/* .img-fluid {
-  min-width: 300px;
-  min-height: 300px;
-} */
-
 .portfolio-details .portfolio-details-slider .swiper-pagination {
   margin-top: 20px;
   position: relative;
@@ -977,7 +970,7 @@ section {
 }
 
 .portfolio-details .portfolio-description {
-  padding-top: 30px;
+  /* padding-top: 30px; */
   margin-left: 50px;
 
 }
