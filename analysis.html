@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dynamic, Static and Hybrid Analysis</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Regna - v4.10.0
+  * Template URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div id="logo">
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a> -->
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <h1><a href="index.html">Regna</a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto active" href="index.html#hero">Home</a></li>
+              <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+              <li><a class="nav-link scrollto" href="index.html#services">Education</a></li>
+              <li><a class="nav-link scrollto " href="index.html#portfolio">Projects</a></li>
+              <li><a class="nav-link scrollto" href="index.html##team">Experience</a></li>
+              <li class="dropdown"><a href="#"><span>Interests</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li class="dropdown"><a href="#"><span>Running</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="#">Europe</a></li>
+                      <li><a href="#">United States</a></li>
+                      <li><a href="#">World</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Traveling</a></li>
+                  <li><a href="#">Remaining addictions</a></li>
+                </ul>
+              </li>
+              <li><a class="nav-link scrollto" href="index.html##contact">Contact</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2> Dynamic, Static and Hybrid Analysis</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#portfolio">Projects</a></li>
+            <li>Dynamic, Static and Hybrid Analysis</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- Breadcrumbs Section -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/fuzzer1.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/delta.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/dse.png" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="portfolio-description">
+              <h2>Dynamic, Static and Hybrid Analysis</h2>
+              <p>
+                Using LLVM compiler infrastructure developed dynamic and static analysis tools to uncover insidious bugs, prevent security vulnerabilities, and automate testing and debugging.
+                <br>
+                <br><b>1) Dynamic analysis tool: </b> coverage-guided random input generator - fuzzer. The programs are fed with a seed input, 
+                and fuzzer generates new inputs by inspecting and mutating outputs of previous rounds of tests. Thanks to this mechanism, 
+                bugs hidden in the deep layers of code are possible to be discovered, like a program shown on the first picture. 
+                Example of mutating strategies used are byte swaps/ replacements/ insertions, extanding/shortening input, insertion of special characters, and more. 
+                <br>
+                <br> <b>2) Static analysis tools: </b> Delta debugging, constraint-based, pointer and data flow analysis. 
+                They allowed for efficient search for bugs by exploring paths in the code, revealing invariants 
+                and finding a 1-minimal crashing input given a large crashing input. An example output of the Delta Debugger was shown on the second picture.
+                <br>
+                <br> <b>3) Hybrid analysis tool: </b> Dynamic Symbolic Execution (DSE) used techniques from both randomized testing 
+                and symbolic execution. It tracks runtime values and symbolic constraints, 
+                and using backtracking search on program computation trees finds bugs more efficiently than using either of the strategies alone. An example of the program solved by my DSE engine
+                was shown on the last picture. The engine uses Z3 interpreter, and LLVM instrumentation.   
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Regna</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Regna
+      -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
