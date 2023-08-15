@@ -45,6 +45,21 @@ h6 {
   padding: 0;
 }
 
+h8 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color:  #666666;
+  font-style: italic;
+  font-size: xx-large;
+  align-items: center;
+
+}
+
+.todo {
+  margin-left: 47vh;
+  margin-top: 29vw;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
